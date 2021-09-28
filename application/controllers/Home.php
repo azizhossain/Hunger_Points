@@ -9,6 +9,7 @@ class Home extends CI_Controller {
 		$data['dishesh'] = $dish;
 		$this->load->view('front/partials/header');
 		$this->load->view('front/home', $data);
+		$this->load->view('front/partials/footer');
 	}
 
 	}
