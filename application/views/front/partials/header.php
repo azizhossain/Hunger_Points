@@ -41,7 +41,7 @@
                         <a class="nav-link" href="<?php echo base_url().'home';?>">Login</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo base_url().'home/index'?>">Register</a>
+                        <a class="nav-link" href="<?php echo base_url().'singup/index'?>">Register</a>
                     </li>
                 </ul>
             </div>
