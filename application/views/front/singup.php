@@ -25,7 +25,7 @@
     <div class="wrapper container" style="background: white;">
 
         <div style="width: 500px;background-color: rgb(0,0,0,0.3);margin: auto;color: #FFFFFF;padding: 5px 0px 5px 0px;text-align: center;border-radius: 5px 5px 5px 5px;margin-bottom: 15px; "><h2>Registration Form</h2></div>
-        <form action="<?php echo base_url().'home/index'; ?>" method="POST" name="myForm" id="myForm"
+        <form action="<?php echo base_url().'singup/create_user'; ?>" method="POST" name="myForm" id="myForm"
             class="form-container mx-auto shadow-container">
             <div class="row">
                 <div class="col-md-6">
@@ -102,5 +102,140 @@
 
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script>
+    const form = document.getElementById('myForm');
+    const userName = document.getElementById('userName');
+    const firstName = document.getElementById('firstName');
+    const lastName = document.getElementById('lastName');
+    const email = document.getElementById('email');
+    const pass = document.getElementById('pass');
+    const phone = document.getElementById('phone');
+    const address = document.getElementById('address');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        validate();
+    })
+
+    const isEmail = (emailVal) => {
+        var re =
+            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!re.test(emailVal)) {
+            return "fail";
+        }
+    }
+
+    const sendData = (sRate, count) => {
+        if(sRate === count) {
+            event.currentTarget.submit();        
+        }
+    }
+
+    const successMsg = () => {
+        let formCon = document.getElementsByClassName('form-control');
+        var count = formCon.length - 1;
+        for (var i = 0; i < formCon.length; i++) {
+            if (formCon[i].className === "form-control success") {
+                var sRate = 0 + i;
+                sendData(sRate, count);
+            } else {
+                return false;
+            }
+        }
+    }
+
+    const validate = () => {
+        const userNameVal = userName.value.trim();
+        const firstNameVal = firstName.value.trim();
+        const lastNameVal = lastName.value.trim();
+        const emailVal = email.value.trim();
+        const passVal = pass.value.trim();
+        const phoneVal = phone.value.trim();
+        const addressVal = address.value.trim();
+
+        //username validation
+        if (userNameVal === "") {
+            setErrorMsg(userName, 'username cannot be blank');
+        } else if (userNameVal.length <= 4 || userNameVal.length >= 16) {
+            setErrorMsg(userName, 'username length should be between 5 and 15"');
+        } else if (!isNaN(userNameVal)) {
+            setErrorMsg(userName, 'only characters are allowed');
+        } else {
+            setSuccessMsg(userName);
+        }
+
+        //firstname validation
+        if (firstNameVal === "") {
+            setErrorMsg(firstName, 'firstname cannot be blank');
+        } else if (!isNaN(firstNameVal)) {
+            setErrorMsg(firstName, 'only characters are allowed');
+        } else {
+            setSuccessMsg(firstName);
+        }
+
+        //lastname validation
+        if (lastNameVal === "") {
+            setErrorMsg(lastName, 'lastname cannot be blank');
+        } else {
+            setSuccessMsg(lastName)
+        }
+
+        //email validation
+        if (emailVal === "") {
+            setErrorMsg(email, 'email cannot be blank');
+        } else if (isEmail(emailVal) === "fail") {
+            setErrorMsg(email, 'enter valid email only');
+        } else {
+            setSuccessMsg(email);
+        }
+
+        //password validation
+        if (passVal === "") {
+            setErrorMsg(pass, 'password can not be blank');
+        } else if (passVal.length <= 7 || passVal.length >= 16) {
+            setErrorMsg(pass, 'password length should be between 8 and 15');
+        } else {
+            setSuccessMsg(pass);
+        }
+
+        //phone validation
+        if (phoneVal === "") {
+            setErrorMsg(phone, 'phone cannot be blank');
+        } else if (phoneVal.length != 11) {
+            setErrorMsg(phone, 'enter valid phone number only');
+        } else {
+            setSuccessMsg(phone);
+        }
+
+        //address validation
+        if (addressVal === "") {
+            setErrorMsg(address, 'address cannot be blank');
+        } else if (addressVal.length < 5) {
+            setErrorMsg(address, "Enter valid address only");
+        } else {
+            setSuccessMsg(address);
+        }
+
+        successMsg();
+    }
+
+    function setErrorMsg(ele, msg) {
+
+        const formCon = ele.parentElement;
+        const formInput = formCon.querySelector('.form-control');
+        const span = formCon.querySelector('span');
+        span.innerText = msg;
+        formInput.className = "form-control is-invalid";
+        span.className = "invalid-feedback font-weight-bold"
+    }
+
+    function setSuccessMsg(ele) {
+        const formCon = ele.parentElement;
+        const formInput = formCon.querySelector('.form-control');
+        formInput.className = "form-control success";
+    }
+
+    </script>
 </body>
+
 </html>
