@@ -18,12 +18,42 @@
 </head>
 
 <body style="background: #ebebe0;">
+    <!-- Navigation Start -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="<?php echo base_url().'home/index';?>"><img src="
+            <?= base_url('public/uploads/logo/hungerpoint.png'); ?>" class="responsive-img" 
+            style="width: 40px;height: 40px;border: 0px  solid silver;">Hunger Points</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRes">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarRes">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="<?php echo base_url().'home/index';?>">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="<?php echo base_url().'home/index';?>">Restaurants</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation End -->
+    <!-- image section start -->
     <div class="img-container">
         <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/bg.jpg';?>">
         <div class="centered-text"></div>
     </div>
-    <div class="wrapper container" style="background: white;">
+    <!-- image section end -->
 
+    <!-- registation form section start -->
+
+    <div class="wrapper container" style="background: white;">
+        <center>    
+            <h1><span class="fa fa-users"></span></h1>
+        </center>
         <div style="width: 500px;background-color: rgb(0,0,0,0.3);margin: auto;color: #FFFFFF;padding: 5px 0px 5px 0px;text-align: center;border-radius: 5px 5px 5px 5px;margin-bottom: 15px; "><h2>Registration Form</h2></div>
         <form action="<?php echo base_url().'singup/create_user'; ?>" method="POST" name="myForm" id="myForm"
             class="form-container mx-auto shadow-container">
@@ -90,18 +120,24 @@
                     value="<?php echo set_value('address');?>"></textarea>
                 <?php echo form_error('address'); ?>
                 <span></span>
+            </div>
             <div class="status text-center text-danger font-weight-bold my-2"></div>
             <button type="submit" class="btn btn-primary btn-block">Create Account</button><br>
             <h6 style="text-align: center; color: red;">Already registered?</h6>
             <div class="status text-center text-danger font-weight-bold my-2"></div>
-            <a href="<?php echo base_url().'home/index';?>" class="btn waves-effect" style="background: black;width: 100%;margin-top: 10px;box-shadow: none;text-transform: capitalize;color:white;">Log In</a>
+            <a href="<?php echo base_url().'login/index';?>" class="btn waves-effect" style="background: black;width: 100%;margin-top: 10px;box-shadow: none;text-transform: capitalize;color:white;">Log In</a>
         </form>
     </div>
+
+    <!-- registation form section end -->
+
+    <!-- jQuery library -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <?php $this->load->view('front/partials/footer'); ?>
 <script>
     const form = document.getElementById('myForm');
     const userName = document.getElementById('userName');
@@ -237,5 +273,4 @@
 
     </script>
 </body>
-
 </html>

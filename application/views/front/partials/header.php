@@ -38,7 +38,7 @@
                     </li>
                     
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo base_url().'home';?>">Login</a>
+                        <a class="nav-link" href="<?php echo base_url().'login/index';?>">Login</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo base_url().'singup/index'?>">Register</a>
