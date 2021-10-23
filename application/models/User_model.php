@@ -6,4 +6,9 @@ class User_model extends CI_Model {
     public function create($formArray) {
         $this->db->insert('users', $formArray);
     }
+       public function getByUsername($usersname) {
+        $this->db->where('usersname', $usersname);
+        $mainuser = $this->db->get('users')->row_array();
+        return $mainuser;
+    }
 } 

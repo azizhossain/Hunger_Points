@@ -67,14 +67,14 @@
         </center>
         
         <h4 class="pb-4 border-bottom text-center">Login Here </h4>
-        <form action="<?php echo base_url().'home' ;?>" name="loginform" id="loginform" method="POST">
+        <form action="<?php echo base_url().'login/authenticate' ;?>" name="loginform" id="loginform" method="POST">
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control bg-light" name="username" id="username"
+                <label for="usersname">Username</label>
+                <input type="text" class="form-control bg-light" name="usersname" id="usersname"
                     placeholder="Username">
                 <span></span>
             </div>
-            <?php echo form_error('username'); ?>
+            <?php echo form_error('usersname'); ?>
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control bg-light" name="password" id="password"
@@ -90,6 +90,69 @@
     </div>
     
     <!-- login form section end -->
+    <script>
+    const form = document.getElementById('loginform');
+    const usersname = document.getElementById('usersname');
+    const password = document.getElementById('password');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        validate();
+    })
+
+    const sendData = (sRate, count) => {
+        if(sRate === count) {
+            event.currentTarget.submit();
+        }
+    }
+
+    const successMsg = (usernameVal) => {
+        let formCon = document.getElementsByClassName('form-control');
+        var count = formCon.length - 1; 
+        for (var i = 0; i < formCon.length; i++) {
+            if (formCon[i].className === "form-control bg-light success") {
+                var sRate = 0 + i;
+                sendData(sRate, count);
+            } else {
+                return false;
+            }
+        }
+    }
+
+    const validate = () => {
+        const usernameVal = usersname.value.trim();
+        const passwordVal = password.value.trim();
+
+        if (usernameVal === "") {
+            setErrorMsg(usersname, 'username can be blank');
+        } else {
+            setSuccessMsg(usersname);
+        }
+
+        if (passwordVal === "") {
+            setErrorMsg(password, 'password can not be blank');
+        } else {
+            setSuccessMsg(password);
+        }
+
+        successMsg();
+    }
+
+    function setErrorMsg(ele, msg) {
+        const formCon = ele.parentElement;
+        const formInput = formCon.querySelector('.form-control');
+        const span = formCon.querySelector('span');
+        span.innerText = msg;
+        formInput.className = "form-control bg-light is-invalid";
+        span.className = "invalid-feedback font-weight-bold";
+    }
+
+    function setSuccessMsg(ele) {
+        const formCon = ele.parentElement;
+        const formInput = formCon.querySelector('.form-control');
+        formInput.className = "form-control bg-light success";
+    }
+    </script>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

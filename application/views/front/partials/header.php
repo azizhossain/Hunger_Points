@@ -36,16 +36,40 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="<?php echo base_url().'home/index';?>">Restaurants</a>
                     </li>
-                    
+                    <?php $user = $this->session->userdata('user'); 
+                    if(empty($user)) {
+                    ?>
+
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo base_url().'login/index';?>">Login</a>
+                        <a class="nav-link" href="<?php echo base_url().'login';?>">Login</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo base_url().'singup/index'?>">Register</a>
                     </li>
+                    <?php } else {?>
+                        <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?php echo ucfirst($user['usersname']); ?>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="<?php echo base_url().'login/logout';?>"><i class="fas fa-power-off"></i> Logout</a>
+                        </div>
+                    </li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Navigation End -->
+    <script>
+    $(document).ready(function() {
+        $(".dropdown").hover(function() {
+            var dropdownMenu = $(this).children(".dropdown-menu");
+            if (dropdownMenu.is(":visible")) {
+                dropdownMenu.parent().toggleClass("open");
+            }
+        })
+    });
+    </script>
     
