@@ -23,7 +23,7 @@
         </center>
         <h3 class="text-center mt-3">Admin Panel</h3>
         <p class="text-center mb-4">Please Login To Continue</p>
-        
+        <!-- login form start -->
         <form action="<?php echo base_url().'admin/login/authenticate' ;?>" name="loginform" id="loginform"
             method="POST" class="form-container mx-auto">
             <div class="form-group">
@@ -41,6 +41,7 @@
                 <button type="submit" class="btn btn-success mr-3">Login</button>
         
         </form>
+        <!-- login form end -->
     </div>
 
 <script>
