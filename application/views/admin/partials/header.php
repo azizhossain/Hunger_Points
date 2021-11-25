@@ -19,9 +19,23 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="<?php echo base_url().'admin/home';?>">
             <span style="color: white;">Admin Panel</span></a>
-
             <div class="collapse navbar-collapse" id="navbarRes">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Orders</a>
+                    </li>
                     <li class="nav-item active">
                         <a href="<?php echo base_url().'admin/login/logout';?>"
                             class="nav-link">Logout </a>
@@ -34,4 +48,5 @@
 
 </body>
 </html>
+
     
