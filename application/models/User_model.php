@@ -11,4 +11,31 @@ class User_model extends CI_Model {
         $mainuser = $this->db->get('users')->row_array();
         return $mainuser;
     }
+
+    public function getUsers() {
+        $result = $this->db->get('users')->result_array();
+        return $result;
+    }
+
+    public function getUser($id) {
+        $this->db->where('user_id', $id);
+        $user = $this->db->get('users')->row_array();
+        return $user;
+    }
+
+    public function update($id, $formArray) {
+        $this->db->where('user_id',$id);
+        $this->db->update('users', $formArray);
+    }
+
+    public function delete($id) {
+        $this->db->where('user_id',$id);
+        $this->db->delete('users');
+    }
+
+    public function countUser() {
+        $query = $this->db->get('users');
+        return $query->num_rows();
+    }
+
 } 

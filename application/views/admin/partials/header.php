@@ -27,8 +27,8 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</a>
 
                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">Manage User</a>
-                            <a class="dropdown-item" href="">Create User</a>
+                            <a class="dropdown-item" href="<?php echo base_url().'admin/user/';?>">Manage User</a>
+                            <a class="dropdown-item" href="<?php echo base_url().'admin/user/create_user';?>">Create User</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown active">
