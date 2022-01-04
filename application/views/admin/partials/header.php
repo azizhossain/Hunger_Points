@@ -36,8 +36,8 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Store</a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">Manage Store</a>
-                            <a class="dropdown-item" href="">Create Store</a>
+                            <a class="dropdown-item" href="<?php echo base_url().'admin/store/';?>">Manage Store</a>
+                            <a class="dropdown-item" href="<?php echo base_url().'admin/store/create_restaurant';?>">Create Store</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown active">
@@ -46,7 +46,7 @@
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="">Manage Categories</a>
-                            <a class="dropdown-item" href="">Create Category</a>
+                            <a class="dropdown-item" href="<?php echo base_url().'admin/category/create_category';?>">Create Category</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown active">
