@@ -15,6 +15,7 @@ class Category extends CI_Controller {
     public function index() {
         $this->load->model('Category_model');
         $this->load->view('admin/partials/header');
+        $this->load->view('admin/category/list');
     }
 
     public function create_category(){
@@ -33,9 +34,5 @@ class Category extends CI_Controller {
             $this->load->view('admin/partials/header');
             $this->load->view('admin/category/add_cat');
         }
-    }
-
-    
-
-    
+    } 
 }

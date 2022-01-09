@@ -45,7 +45,7 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">Manage Categories</a>
+                        <a class="dropdown-item" href="<?php echo base_url().'admin/category/';?>">Manage Categories</a>
                             <a class="dropdown-item" href="<?php echo base_url().'admin/category/create_category';?>">Create Category</a>
                         </div>
                     </li>
