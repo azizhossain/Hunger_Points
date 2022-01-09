@@ -12,4 +12,15 @@ class Category_model extends CI_Model {
         return $cats_result;
     }
 
+    public function getCat($id) {
+        $this->db->where('c_id', $id);
+        $cat = $this->db->get('res_category')->row_array();
+        return $cat;
+    }
+
+    public function update($id, $cat) {
+        $this->db->where('c_id', $id);
+        $this->db->update('res_category', $cat);
+    }
+
 }
