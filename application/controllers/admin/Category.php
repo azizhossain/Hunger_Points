@@ -65,5 +65,20 @@ class Category extends CI_Controller {
             $this->load->view('admin/category/edit', $data);
         }
 
+    }
+
+    public function delete($id) {
+        $this->load->model('Category_model');
+        $cat = $this->Category_model->getCat($id);
+
+        if(empty($cat)) {
+            $this->session->set_flashdata('error', 'Category not found');
+            redirect(base_url().'admin/category/index');
+        }
+
+        $cat = $this->Category_model->delete($id);
+
+        $this->session->set_flashdata('cat_success', 'Category deleted successfully');
+        redirect(base_url().'admin/category/index');
     } 
 }

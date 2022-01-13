@@ -35,7 +35,7 @@
                                 <a href="<?php echo base_url().'admin/category/edit/'.$cat['c_id']?>"
                                     class="btn btn-info mb-1"><i
                                         class="fas fa-edit mr-1"></i>Edit</a>
-                                <a href=""
+                                <a href="javascript:void(0);" onclick="deleteCat(<?php echo $cat['c_id']; ?>)"
                                     class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
 
                             </td>
@@ -52,3 +52,19 @@
         </div>
     </div>    
 </div>
+
+<script type="text/javascript">
+function deleteCat(id) {
+    if (confirm("Are you sure you want to delete category?")) {
+        window.location.href = '<?php echo base_url().'admin/category/delete/';?>' + id;
+    }
+}
+$(document).ready(function() {
+    $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+</script>
