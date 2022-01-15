@@ -13,9 +13,11 @@ class Store extends CI_Controller {
     }
 
     public function index() {
-        //$this->load->model('Store_model');
-        
+        $this->load->model('Store_model');
+        $stores = $this->Store_model->getStores();
+        $store_data['stores'] = $stores;
         $this->load->view('admin/partials/header');
+        $this->load->view('admin/store/list', $store_data);
     }
 
     public function create_restaurant() {
