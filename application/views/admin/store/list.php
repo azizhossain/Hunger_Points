@@ -1,5 +1,5 @@
-<div class="container my-4" style="width:100% ; height: 100%;">
-    <div class="row">
+    <div class="row"><div class="container my-4">
+
         <div class="col-md-6">
             <h4>Available Restaurant's</h4>
         </div>
@@ -35,7 +35,7 @@
                         <td>
                             <a href="" class="btn btn-info mb-1"><i class="fas fa-edit mr-1"></i>Edit</a>
 
-                            <a href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
+                            <a href="javascript:void(0);" onclick="deleteStore(<?php echo $store['r_id']; ?>)" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
                         </td>
                     </tr>
                     <?php } ?>
@@ -49,3 +49,18 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+function deleteStore(id) {
+    if (confirm("Are you sure you want to delete store?")) {
+        window.location.href = '<?php echo base_url().'admin/store/delete/';?>' + id;
+    }
+}
+$(document).ready(function() {
+    $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+</script>

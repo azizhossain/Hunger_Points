@@ -11,4 +11,15 @@ class Store_model extends CI_Model {
         $result = $this->db->get('restaurants')->result_array();
         return $result;
     }
+
+    public function getStore($id) {
+        $this->db->where('r_id', $id);
+        $store = $this->db->get('restaurants')->row_array();
+        return $store;
+    }
+
+    public function delete($id) {
+        $this->db->where('r_id',$id);
+        $this->db->delete('restaurants');
+    }
 }
