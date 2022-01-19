@@ -1,6 +1,9 @@
 <div class="conatiner">
     <form action="<?php echo base_url().'admin/store/create_restaurant';?>" method="POST"
         class="form-container mx-auto  shadow-container" id="myForm" style="width:90%" enctype="multipart/form-data">
+        <center>
+        <h1><span class="fa fa-building"></span></h1>
+        </center>
         <h3 class="mb-3 p-2 text-center mb-3">Add New Restaurant Details</h3>
         <div class="row">
             <div class="col-md-6">
@@ -67,7 +70,7 @@
                         <option value="9pm">9pm</option>
                         <option value="10pm">10pm</option>
                         <option value="11pm">11pm</option>
-                        <option value="12pm">12pm</option>
+                        <option value="12am">12am</option>
                     </select>
                     <?php echo form_error('c_hr');?>
                     <span></span>
@@ -78,7 +81,7 @@
                     <select name="o_days" id="o_days" class="form-control <?php echo (form_error('o_days') != "") ? 'is-invalid' : '';?>">
                         <option value="">--Select your Days--</option>
                         <option value="Sat-Thu">Sat-Thu</option>
-                        <option value="Sun-Wed">Sun-Thu</option>
+                        <option value="Sun-Thu">Sun-Thu</option>
                         <option value="Fri">Fri</option>
                         <option value="24hr-x7">24hr-x7</option>
                     </select>

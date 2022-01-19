@@ -33,7 +33,7 @@
                         <td><?php echo $store['o_days']; ?></td>
                         <td><?php echo $store['address']; ?></td>
                         <td>
-                            <a href="" class="btn btn-info mb-1"><i class="fas fa-edit mr-1"></i>Edit</a>
+                            <a href="<?php echo base_url().'admin/store/edit/'.$store['r_id']?>" class="btn btn-info mb-1"><i class="fas fa-edit mr-1"></i>Edit</a>
 
                             <a href="javascript:void(0);" onclick="deleteStore(<?php echo $store['r_id']; ?>)" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
                         </td>

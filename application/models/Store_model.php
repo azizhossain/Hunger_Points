@@ -22,4 +22,9 @@ class Store_model extends CI_Model {
         $this->db->where('r_id',$id);
         $this->db->delete('restaurants');
     }
+
+    public function update($id, $formArray) {
+        $this->db->where('r_id', $id);
+        $this->db->update('restaurants', $formArray);
+    } 
 }
