@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit ('No direct script access allowed');
 
 class Menu_model extends CI_Model {
 
-    public function getMenu() {
-        
+    public function create($formArray) {
+        $this->db->insert('dishesh', $formArray);
     }
 }
