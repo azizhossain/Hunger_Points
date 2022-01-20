@@ -1,7 +1,20 @@
     <div class="row"><div class="container my-4">
-
+     <?php if($this->session->flashdata('res_success') != ""):?>
+    <div class="alert alert-success">
+        <?php echo $this->session->flashdata('res_success');?>
+    </div>
+    <?php endif ?>
+    <?php if($this->session->flashdata('error') != ""):?>
+    <div class="alert alert-danger">
+        <?php echo $this->session->flashdata('error');?>
+    </div>
+    <?php endif ?>
+    <div class="row">
         <div class="col-md-6">
             <h4>Available Restaurant's</h4>
+        </div>
+        <div class="col-md-6 text-right">
+            <input class="form-control mb-3" id="myInput" type="text" placeholder="Search .." style="width:50%;">
         </div>
         <div class="col-md-12">
             <table class="table table-striped table-responsive table-hover table-bordered">
@@ -49,6 +62,7 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
 function deleteStore(id) {
     if (confirm("Are you sure you want to delete store?")) {
