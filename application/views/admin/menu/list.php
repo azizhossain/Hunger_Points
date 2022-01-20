@@ -19,8 +19,8 @@
         <div class="table-responsive-sm">
             <table class="table table-bordered table-hover table-striped table-responsive">
                 <thead>
-                    <tr>
-                        <th>#</th>
+                    <tr style="background: skyblue;">
+                        <th>ID</th>
                         <th>Dish Name</th>
                         <th>About</th>
                         <th>Price</th>
@@ -34,7 +34,7 @@
                         <td><?php echo $dish['r_id']; ?></td>
                         <td><?php echo $dish['name']; ?></td>
                         <td><?php echo $dish['about']; ?></td>
-                        <td><?php echo "$".$dish['price']; ?></td>
+                        <td><?php echo "৳ ".$dish['price']; ?></td>
                         <td>
                             <a href="<?php echo base_url().'admin/menu/edit/'.$dish['d_id']; ?>"
                                 class="btn btn-info mb-1"><i

@@ -8,6 +8,18 @@ class Menu_model extends CI_Model {
     }
 
     public function getMenu() {
-        
+        $result = $this->db->get('dishesh')->result_array();
+        return $result;
+    }
+
+    public function getSingleDish($id) {
+        $this->db->where('d_id', $id);
+        $dish = $this->db->get('dishesh')->row_array();
+        return $dish;
+    }
+
+    public function delete($id) {
+        $this->db->where('d_id',$id);
+        $this->db->delete('dishesh');
     }
 }

@@ -14,7 +14,10 @@ class Menu extends CI_Controller {
 
     public function index() {
         $this->load->model('Menu_model');
+         $dishesh = $this->Menu_model->getMenu();
+        $data['dishesh'] = $dishesh;
         $this->load->view('admin/partials/header');
+        $this->load->view('admin/menu/list', $data);
     }
 
     public function create_menu(){
@@ -68,7 +71,6 @@ class Menu extends CI_Controller {
                     $data['stores']= $store;
                     $this->load->view('admin/partials/header');
                     $this->load->view('admin/menu/add_menu', $data);
-                    $this->load->view('admin/partials/footer');
                 }
 
                 
@@ -94,6 +96,29 @@ class Menu extends CI_Controller {
         
     }
 
-    
+    public function delete($id){
+
+        $this->load->model('Menu_model');
+        $dish = $this->Menu_model->getSingleDish($id);
+
+        if(empty($dish)) {
+            $this->session->set_flashdata('error', 'dish not found');
+            redirect(base_url().'admin/menu');
+        }
+
+        if (file_exists('./public/uploads/dishesh/'.$dish['img'])) {
+            unlink('./public/uploads/dishesh/'.$dish['img']);
+        }
+
+        if(file_exists('./public/uploads/dishesh/thumb/'.$dish['img'])) {
+            unlink('./public/uploads/dishesh/thumb/'.$dish['img']);
+        }
+
+        $this->Menu_model->delete($id);
+
+        $this->session->set_flashdata('dish_success', 'Dish Deleted Successfully');
+        redirect(base_url().'admin/menu/index');
+
+    }
     
 }
