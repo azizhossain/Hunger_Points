@@ -27,4 +27,8 @@ class Menu_model extends CI_Model {
         $this->db->where('d_id', $id);
         $this->db->update('dishesh', $formArray);
     }
+    public function countDish() {
+        $query = $this->db->get('dishesh');
+        return $query->num_rows();
+    }
 }

@@ -27,5 +27,10 @@ class Category_model extends CI_Model {
         $this->db->where('c_id', $id);
         $this->db->delete('res_category');
     }
+    
+    public function countCategory() {
+        $query = $this->db->get('res_category');
+        return $query->num_rows();
+    }
 
 }

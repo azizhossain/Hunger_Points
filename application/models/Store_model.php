@@ -26,5 +26,10 @@ class Store_model extends CI_Model {
     public function update($id, $formArray) {
         $this->db->where('r_id', $id);
         $this->db->update('restaurants', $formArray);
+    }
+    public function countStore() {
+        $query = $this->db->get('restaurants');
+        return $query->num_rows();
     } 
+    
 }
