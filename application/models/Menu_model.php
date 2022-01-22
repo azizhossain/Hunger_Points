@@ -22,4 +22,9 @@ class Menu_model extends CI_Model {
         $this->db->where('d_id',$id);
         $this->db->delete('dishesh');
     }
+
+    public function update($id, $formArray) {
+        $this->db->where('d_id', $id);
+        $this->db->update('dishesh', $formArray);
+    }
 }
