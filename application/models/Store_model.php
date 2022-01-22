@@ -31,5 +31,13 @@ class Store_model extends CI_Model {
         $query = $this->db->get('restaurants');
         return $query->num_rows();
     } 
+
+    public function getResInfo() {
+        $this->db->select('*');
+        $this->db->from('restaurants');
+        $this->db->join('res_category','restaurants.c_id = res_category.c_id');
+        $result = $this->db->get()->result_array();
+        return $result;
+    }
     
 }

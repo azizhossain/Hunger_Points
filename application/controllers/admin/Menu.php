@@ -136,7 +136,7 @@ class Menu extends CI_Controller {
 
         $this->load->helper('common_helper');
 
-        $config['upload_path']          = './public/uploads/dishesh/';
+        $config['upload_path']          = './public/uploads/dishesh/thumb/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
         //$config['encrypt_name']         = true;
 

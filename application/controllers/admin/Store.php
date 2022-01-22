@@ -148,7 +148,7 @@ public function delete($id){
 
         $this->load->helper('common_helper');
 
-        $config['upload_path']          = './public/uploads/restaurant/';
+        $config['upload_path']          = './public/uploads/restaurant/thumb/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
         //$config['encrypt_name']         = true;
 
