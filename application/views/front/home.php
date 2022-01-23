@@ -12,7 +12,7 @@
                 <h1 class="display-2">Are You Hungry?!</h1>
                 <h3>Don't worry, we are here to serve you</h3>
                 <a href="" class="btn btn-outline-light btn-lg">Order Now</a>
-                <a href="" class="btn btn-primary btn-lg">View Menu</a>
+                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-primary btn-lg">View Menu</a>
             </div>
         </div>
         <div class="carousel-item">

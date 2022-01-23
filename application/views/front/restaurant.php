@@ -24,7 +24,7 @@
                     <p class="card-text mb-0"><?php echo $store['o_days']; ?></p>
                     <p class="card-text"><?php echo $store['o_hr']; ?> - <?php echo $store['c_hr']; ?></p>
                     <hr>
-                    <a href="" class="btn btn-primary">View
+                    <a href="<?php echo base_url().'dish/list/'.$store['r_id']; ?>" class="btn btn-primary">View
                         Menu</a>
                 </div>
             </div>
