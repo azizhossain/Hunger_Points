@@ -32,7 +32,7 @@
                         <h4 class="text-muted"><b>৳<?php echo $dish['price']; ?></b></h4>
                     </div>
                     <p class="card-text"><?php echo $dish['about']; ?></p>
-                    <a href="" class="btn btn-success"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    <a href="<?php echo base_url().'Dish/addToCart/'.$dish['d_id']; ?>" class="btn btn-success"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
                 </div>
             </div>
         </div>
