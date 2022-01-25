@@ -53,6 +53,7 @@
                             <?php echo ucfirst($user['usersname']); ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="<?php echo base_url().'profile';?>"><i class="fas fa-user-circle"></i> My Profile</a>
                             <a class="dropdown-item" href="<?php echo base_url().'login/logout';?>"><i class="fas fa-power-off"></i> Logout</a>
                         </div>
                     </li>
