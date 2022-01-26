@@ -67,4 +67,50 @@
             </form>
         </div>
     </div>
+    <div class="col-md-6">
+        <div class="wrapper mt-sm-5">
+            <?php if($this->session->flashdata('pwd_success') != ""):?>
+            <div class="alert alert-success">
+                <?php echo $this->session->flashdata('pwd_success');?>
+            </div>
+            <?php endif ?>
+            <?php if($this->session->flashdata('pwd_error') != ""):?>
+            <div class="alert alert-danger">
+                <?php echo $this->session->flashdata('pwd_error');?>
+            </div>
+            <?php endif ?>
+            <?php $loggedUser = $this->session->userdata('user');?>
+            <form action="<?php echo base_url().'profile/editPassword/'.$loggedUser['user_id']?>" method="POST">
+                <center>    
+                         <h1><i class="fas fa-unlock-alt"></i></h1>
+                </center>
+                <h4 class="pb-4 border-bottom" style="text-align:center;">Password</h4>
+                <div class="py-2">
+                    <div>
+                        <input type="password"
+                            class="bg-light form-control mb-2 <?php echo (form_error('cPassword') != "") ? 'is-invalid' : '';?>"
+                            name="cPassword" placeholder="Current Password" value="<?php echo set_value('cPassword')?>">
+                        <?php echo form_error('cPassword'); ?>
+                    </div>
+                    <div>
+                        <input type="password"
+                            class="bg-light form-control mb-2 <?php echo (form_error('nPassword') != "") ? 'is-invalid' : '';?>"
+                            name="nPassword" placeholder="New Password" value="<?php echo set_value('nPassword')?>">
+                        <?php echo form_error('nPassword'); ?>
+                    </div>
+                    <div>
+                        <input type="password"
+                            class="bg-light form-control mb-2 <?php echo (form_error('nRPassword') != "") ? 'is-invalid' : '';?>"
+                            name="nRPassword" placeholder="Confirm Password"
+                            value="<?php echo set_value('nRPassword')?>">
+                        <?php echo form_error('nRPassword'); ?>
+                    </div>
+                    <div class="py-3 pb-4 border-bottom">
+                        <button type="submit" class="btn btn-success mr-3 mb-2">Save Changes</button>
+                        <a href="<?php echo base_url().'home' ?>" class="btn border button">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
