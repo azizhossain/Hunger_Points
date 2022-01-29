@@ -22,8 +22,8 @@ class Checkout extends CI_Controller {
 
     public function index() {
        $loggedUser = $this->session->userdata('user');
-       $u_id = $loggedUser['user_id'];
-       $user = $this->User_model->getUser($u_id);
+       $user_id = $loggedUser['user_id'];
+       $user = $this->User_model->getUser($user_id);
 
         if($this->cart->total_items() <= 0) {
             redirect(base_url().'restaurant');
@@ -35,8 +35,8 @@ class Checkout extends CI_Controller {
             if($this->form_validation->run() == true) { 
                 $formArray['address'] = $this->input->post('address');
                 
-                $this->User_model->update($u_id,$formArray);
-                $order = $this->placeOrder($u_id);
+                $this->User_model->update($user_id,$formArray);
+                $order = $this->placeOrder($user_id);
                 if($order) {
                     $this->session->set_flashdata('success_msg', 'Thank You! Your order has been placed successfully!');
                        redirect(base_url().'orders');
@@ -50,5 +50,30 @@ class Checkout extends CI_Controller {
         $this->load->view('front/partials/header');
         $this->load->view('front/checkout',$data);
         $this->load->view('front/partials/footer');
+    }
+
+    public function placeOrder($user_id) {  
+        $cartItems = $this->cart->contents();
+        $i = 0;
+        foreach($cartItems as $item) {
+            $orderData[$i]['user_id'] = $user_id;
+            $orderData[$i]['d_id'] = $item['id'];
+            $orderData[$i]['r_id'] = $item['r_id'];
+            $orderData[$i]['d_name'] = $item['name'];
+            $orderData[$i]['quantity'] = $item['qty'];
+            $orderData[$i]['price'] = $item['subtotal'];
+            $orderData[$i]['date'] = date('Y-m-d H:i:s', now());
+            $orderData[$i]['success-date'] = date('Y-m-d H:i:s', now());
+            $i++;
+        }
+
+        if(!empty($orderData)) {                
+        $insertOrder = $this->Order_model->insertOrder($orderData);
+            if($insertOrder) {
+                $this->cart->destroy();
+                return $insertOrder;
+            }
+        }   
+    return false;
     }
 }
