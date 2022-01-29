@@ -14,9 +14,35 @@
                     </tr>
                 </thead>
                 <tbody id="myTable">
+                    <?php if(!empty($orders)) {?>
+                    <?php foreach($orders as $order) { ?>
+                    <?php $status=$order['status']; 
+                            if($status=="" or $status=="NULL" or $status=="in process" or $status=="rejected") { ?>
+                    <tr>
+                        <td><?php echo $order['d_name']; ?></td>
+                        <td><?php echo $order['quantity']; ?></td>
+                        <td><?php echo '৳ '.$order['price']; ?></td>
+                        <?php if($status=="" or $status=="NULL") { ?>
+                        <td> <button type="button" class="btn btn-secondary" style="font-weight:bold;"><i class="fas fa-bars"></i> Dispatch</button></td>
+                        <?php } if($status=="in process") { ?>
+                        <td> <button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin" aria-hidden="true"></span> On Your Way!</button></td>
+                        <?php }?>
+                        <?php if($status=="rejected") { ?>
+                        <td> <button type="button" class="btn btn-danger"> <i class="far fa-times-circle"></i> Cancelled</button>
+                        </td>
+                        <?php } ?>
+                        <td><?php echo $order['date']; ?></td>
+                        <td>
+                            <a href=""class="btn btn-danger"><i class="fas fa-trash-alt"></i> Cancel</a>
+                        </td>
+                    </tr>
+                    <?php } ?>
+                    <?php } ?>
+                    <?php } else { ?>
                     <tr>
                         <td colspan="6" style="text-align:center; color: red;">Records not found</td>
                     </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>

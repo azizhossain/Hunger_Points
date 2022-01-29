@@ -7,5 +7,11 @@ class Order_model extends CI_Model {
         $this->db->insert_batch('user_orders', $orderData);
         return $this->db->insert_id();
     }
+    public function getUserOrder($id) {
+        $this->db->where('user_id', $id);
+        $this->db->order_by('o_id','DESC');
+        $result = $this->db->get('user_orders')->result_array();
+        return $result;
+    }
     
 }
