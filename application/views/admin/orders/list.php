@@ -14,6 +14,7 @@
             <div class="btn-group">
                 <h2>All Orders</h2>
             </div>
+            <input class="form-control mb-3" id="myInput" type="text" placeholder="Search .." style="width:50%;">
         </div>
 
         <div class="table-responsive-sm">
