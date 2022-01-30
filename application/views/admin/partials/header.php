@@ -63,7 +63,7 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Orders</a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href=""></i> All Orders</a>
+                            <a class="dropdown-item" href="<?php echo base_url().'admin/orders/';?>"></i> All Orders</a>
                         </div>
                     </li>
                     <li class="nav-item active">
