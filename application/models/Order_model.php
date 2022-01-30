@@ -21,5 +21,9 @@ class Order_model extends CI_Model {
         $result = $this->db->get()->result_array();
         return $result;
     }
+    public function deleteOrder($id) {
+        $this->db->where('o_id', $id);
+        $this->db->delete('user_orders');
+    }
     
 }

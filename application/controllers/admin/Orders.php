@@ -21,4 +21,19 @@ class Orders extends CI_Controller {
         $this->load->view('admin/partials/header');
         $this->load->view('admin/orders/list', $data);
     }
+    public function deleteOrder($id) {
+        $order = $this->Order_model->getAllOrders();
+        $data['orders'] = $order;
+
+
+        if(empty($order)) {
+            $this->session->set_flashdata('error', 'Order not found');
+            redirect(base_url().'admin/orders/index');
+        }
+
+        $this->Order_model->deleteOrder($id);
+
+        $this->session->set_flashdata('success', 'Order deleted successfully');
+        redirect(base_url().'admin/orders/index');
+    }
 }

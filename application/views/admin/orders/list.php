@@ -1,5 +1,15 @@
 <div class="container">
     <div class="container shadow-container">
+        <?php if($this->session->flashdata('success') != ""):?>
+        <div class="alert alert-success">
+            <?php echo $this->session->flashdata('success');?>
+        </div>
+        <?php endif ?>
+        <?php if($this->session->flashdata('error') != ""):?>
+        <div class="alert alert-danger">
+            <?php echo $this->session->flashdata('error');?>
+        </div>
+        <?php endif ?>
         <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
                 <h2>All Orders</h2>
@@ -46,7 +56,7 @@
                         <td><?php echo $order['date']; ?></td>
                         <td>
                             <a href="" class="btn btn-success mb-1"><i class="fas fa-arrow-alt-circle-right"></i> Process</a>
-                            <a href=""class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
+                            <a href="<?php echo base_url().'admin/orders/deleteOrder/'.$order['o_id']?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
                         </td>
                     </tr>
                     <?php } ?>
@@ -60,3 +70,19 @@
         </div>
     </div>
 </div>
+<script>
+function deleteOrder(id) {
+    if (confirm("Are you sure you want to delete orders?")) {
+        window.location.href = '<?php echo base_url().'admin/orders/deleteOrder/';?>' + id;
+    }
+}
+
+$(document).ready(function() {
+    $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+</script>
