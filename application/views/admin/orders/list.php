@@ -56,7 +56,7 @@
                         <?php } ?>
                         <td><?php echo $order['date']; ?></td>
                         <td>
-                            <a href="" class="btn btn-success mb-1"><i class="fas fa-arrow-alt-circle-right"></i> Process</a>
+                            <a href="<?php echo base_url().'admin/orders/processOrder/'.$order['o_id'];?>" class="btn btn-success mb-1"><i class="fas fa-arrow-alt-circle-right"></i> Process</a>
                             <a href="<?php echo base_url().'admin/orders/deleteOrder/'.$order['o_id']?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
                         </td>
                     </tr>

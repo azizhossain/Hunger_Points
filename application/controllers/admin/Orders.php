@@ -36,4 +36,10 @@ class Orders extends CI_Controller {
         $this->session->set_flashdata('success', 'Order deleted successfully');
         redirect(base_url().'admin/orders/index');
     }
+    public function processOrder($id) {
+        $order = $this->Order_model->getOrderByUser($id);
+        $data['order'] = $order;
+        $this->load->view('admin/partials/header');
+        $this->load->view('admin/orders/processOrder', $data);
+    }
 }
