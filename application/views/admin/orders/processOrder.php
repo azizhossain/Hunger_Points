@@ -26,7 +26,7 @@
                 <td><strong>Order Date:</strong></td>
                 <td><?php echo $order['date'] ?></td>
             </tr>
-            <form method="post" action="">
+            <form method="post" action="<?php echo base_url().'admin/orders/updateOrder/'.$order['o_id']; ?>">
                 <tr>
                     <td><strong>Select Order Status:</strong></td>
                     <td>
