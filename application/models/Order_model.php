@@ -43,4 +43,21 @@ class Order_model extends CI_Model {
         return $query->num_rows();
     }
     
+    public function countPendingOrders() {
+        $this->db->where('status', NULL);
+        $query = $this->db->get('user_orders');
+        return $query->num_rows();
+    }
+
+    public function countDeliveredOrders() {
+        $this->db->where('status','closed');
+        $query = $this->db->get('user_orders');
+        return $query->num_rows();
+    }
+
+    public function countRejectedOrders() {
+        $this->db->where('status','rejected');
+        $query = $this->db->get('user_orders');
+        return $query->num_rows();
+    }
 }

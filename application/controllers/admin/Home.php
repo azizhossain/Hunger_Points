@@ -26,6 +26,9 @@ class Home extends CI_Controller {
         $data['countDish'] = $this->Menu_model->countDish();
         $data['countCategory'] = $this->Category_model->countCategory();
         $data['countOrders'] = $this->Order_model->countOrders();
+        $data['countPendingOrders'] = $this->Order_model->countPendingOrders();
+        $data['countDeliveredOrders'] = $this->Order_model->countDeliveredOrders();
+        $data['countRejectedOrders'] = $this->Order_model->countRejectedOrders();
 
 
        $this->load->view('admin/partials/header');

@@ -43,6 +43,21 @@
                 </div>
             </div>
         </div>
+
+          <div class="col-md-3">
+            <div class="card shadow p-30" style="background: #ffcc99;">
+                <div class="media">
+                    <div class="media-left meida media-middle">
+                        <span><i class="fa fa-th-large" style="color:#505050; font-size: 2.5em;"></i></span>
+                    </div>
+                    <div class="media-body media-text-right">
+                        <h2><?php echo $countCategory;?></h2>
+                        <p class="m-b-0">
+                        Categories</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div class="col-md-3">
             <div class="card shadow p-30" style="background: #ccff99;">
@@ -59,27 +74,13 @@
         </div>
 
         <div class="col-md-3">
-            <div class="card shadow p-30" style="background: #ffcc99;">
-                <div class="media">
-                    <div class="media-left meida media-middle">
-                        <span><i class="fa fa-th-large" style="color:#505050; font-size: 2.5em;"></i></span>
-                    </div>
-                    <div class="media-body media-text-right">
-                        <h2><?php echo $countCategory;?></h2>
-                        <p class="m-b-0">
-                        Categories</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
             <div class="card shadow p-30" style="background: #dfdf9f;">
                 <div class="media">
                     <div class="media-left meida media-middle">
                         <span><i class="fa fa-spinner" style="color:#ad6d9c; font-size: 2.5em;"></i></span>
                     </div>
                     <div class="media-body media-text-right">
+                        <h2><?php echo $countPendingOrders; ?></h2>
                         <p class="m-b-0">Pending Order/s</p>
                     </div>
                 </div>
@@ -92,8 +93,9 @@
                     <div class="media-left meida media-middle">
                         <span><i class="fa fa-check-square" style="color:#28a745; font-size: 2.5em;"></i></span>
                     </div>
-                    <div class="media-body media-text-right"> 
-                        <p class="m-b-0">Delivered Order/s</p>
+                    <div class="media-body media-text-right">
+                    <h2><?php echo $countDeliveredOrders; ?></h2> 
+                    <p class="m-b-0">Delivered Order/s</p>
                     </div>
                 </div>
             </div>
@@ -106,6 +108,7 @@
                         <span><i class="fa fa-times-circle" style="color:#dc3545; font-size: 2.5em;"></i></span>
                     </div>
                     <div class="media-body media-text-right">
+                        <h2><?php echo $countRejectedOrders; ?></h2>
                         <p class="m-b-0">Rejected Order/s</p>
                     </div>
                 </div>
