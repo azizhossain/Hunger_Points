@@ -61,9 +61,26 @@
                     </tr>
                 </thead>
                 <tbody id="myTable">
+                    <?php if(!empty($orders)) {?>
+                    <?php foreach($orders as $order) { ?>
+                    <?php $status=$order['status']; 
+                            if($status=="closed") { ?>
+                    <tr>
+                        <?php $cDate = strtotime($order['date']); ?>
+                        <td><?php echo date('d-M-Y',$cDate); ?></td>
+                        <td><?php echo $order['d_name']; ?></td>
+                        <td><?php echo $order['quantity']; ?></td>
+                        <td><?php echo '৳ '.$order['price']; ?></td>
+                        <td> <button type="button" class="btn btn-success"><i class="fas fa-check"></i> Delivered</button>
+                        <td><a href="" class="btn btn-info"><i class="fas fa-file-alt"></i> Invoice</a></td>
+                    </tr>
+                    <?php } ?>
+                    <?php } ?>
+                    <?php } else { ?>
                     <tr>
                         <td colspan="6" style="text-align:center; color: red;">Records not found</td>
                     </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>

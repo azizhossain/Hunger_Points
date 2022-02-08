@@ -53,7 +53,7 @@ class Orders extends CI_Controller {
             $orderData['success-date'] = date('Y-m-d H:i:s', now());
             $this->Order_model->update($id, $order);
             
-            $this->session->set_flashdata('success', 'Order processed successfully');
+            $this->session->set_flashdata('success', 'Order Processed Successfully');
             redirect(base_url().'admin/orders/index');
 
         } else {
