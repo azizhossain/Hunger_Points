@@ -51,6 +51,7 @@
                         <span><i class="fa fa-file" style="color:#9466de; font-size: 2.5em;"></i></span>
                     </div>
                     <div class="media-body media-text-right">
+                        <h2><?php echo $countOrders; ?></h2>
                         <p class="m-b-0">Total Order/s</p>
                     </div>
                 </div>

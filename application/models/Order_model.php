@@ -37,5 +37,10 @@ class Order_model extends CI_Model {
         $result = $this->db->get()->row_array();
         return $result;
     }
+
+    public function countOrders() {
+        $query = $this->db->get('user_orders');
+        return $query->num_rows();
+    }
     
 }

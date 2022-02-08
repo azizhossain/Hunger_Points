@@ -17,6 +17,7 @@ class Home extends CI_Controller {
         $this->load->model('Store_model');
         $this->load->model('Menu_model');  
         $this->load->model('Category_model');
+        $this->load->model('Order_model');
     }
 
     public function index() {
@@ -24,6 +25,8 @@ class Home extends CI_Controller {
         $data['countStore'] = $this->Store_model->countStore();
         $data['countDish'] = $this->Menu_model->countDish();
         $data['countCategory'] = $this->Category_model->countCategory();
+        $data['countOrders'] = $this->Order_model->countOrders();
+
 
        $this->load->view('admin/partials/header');
        $this->load->view('admin/dashboard', $data);
