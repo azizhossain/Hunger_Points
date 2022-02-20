@@ -23,4 +23,29 @@ class Orders extends CI_Controller {
         $this->load->view('front/partials/footer');
     }
 
+    public function invoice($id) {
+        $order = $this->Order_model->getOrderByUser($id);
+        $data['order'] = $order;
+        $u_id = $order['user_id'];
+        $r_id = $order['r_id'];
+        $d_id = $order['d_id'];
+        $res = $this->Store_model->getStore($r_id);
+        $data['res'] = $res;   
+        $dish = $this->Menu_model->getSingleDish($d_id);
+        $data['dish'] = $dish;
+    
+        $user = $this->session->userdata('user');
+        if($u_id == $user['user_id']) {
+            if($order['status'] == 'closed') {
+                $this->load->view('front/invoice', $data);
+            } else {
+                $this->session->set_flashdata('error_msg', 'your order is not yet complete');
+                redirect(base_url().'orders');
+            }
+        } else {
+            $this->session->set_flashdata('error_msg', 'you are accessing wrong order data');
+            redirect(base_url().'orders');
+        }        
+    }
+
 }

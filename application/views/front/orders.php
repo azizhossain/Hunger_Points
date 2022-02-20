@@ -72,7 +72,7 @@
                         <td><?php echo $order['quantity']; ?></td>
                         <td><?php echo '৳ '.$order['price']; ?></td>
                         <td> <button type="button" class="btn btn-success"><i class="fas fa-check"></i> Delivered</button>
-                        <td><a href="" class="btn btn-info"><i class="fas fa-file-alt"></i> Invoice</a></td>
+                        <td><a href="<?php echo base_url().'orders/invoice/'.$order['o_id']; ?>"  target="_blank" class="btn btn-info"><i class="fas fa-file-alt"></i> Invoice</a></td>
                     </tr>
                     <?php } ?>
                     <?php } ?>
