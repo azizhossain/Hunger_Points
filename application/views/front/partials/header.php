@@ -47,6 +47,9 @@
                         <a class="nav-link" href="<?php echo base_url().'singup/index'?>">Register</a>
                     </li>
                     <?php } else {?>
+                        <li class="nav-item active">
+                        <a class="nav-link" href="<?php echo base_url().'cart';?>"><i class="fas fa-cart-arrow-down"></i> My Cart</a>
+                    </li>
                         <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -60,10 +63,7 @@
                             <a class="dropdown-item" href="<?php echo base_url().'login/logout';?>"><i class="fas fa-power-off"></i> Logout</a>
                         </div>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo base_url().'cart';?>"><i class="fas fa-cart-arrow-down"></i> My Cart</a>
-                    </li>
-                    <?php } ?>
+                     <?php } ?>
                 </ul>
             </div>
         </div>

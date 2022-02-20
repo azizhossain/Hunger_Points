@@ -44,7 +44,8 @@ function updateCartItem(obj, rowid) {
                     </td>
                     <td><?php echo '৳'.$item['subtotal']; ?></td>
                     <td>
-                        <a href="" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fas fa-trash-alt"></i></a>
+                        <a href="<?php echo base_url().'cart/removeItem/'.$item['rowid'] ; ?>"
+                            onclick="return confirm('Are you sure?')" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fas fa-trash-alt"></i></a>
                     </td>
                 </tr>
                 <?php } ?>

@@ -40,4 +40,10 @@ class Cart extends CI_Controller {
         }
         echo $update ? 'ok':'err';
     }
+
+    function removeItem($id) {
+        $remove = $this->cart->remove($id);
+
+        redirect(base_url().'cart');
+    }
 }
