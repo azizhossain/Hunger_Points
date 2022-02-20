@@ -17,4 +17,15 @@ class Admin_model extends CI_Model {
         ORDER BY SUM(quantity) DESC');
         return $query->result();
     }
+
+    public function getResReport() {
+        $this->db->group_by('u.r_id');
+        $this->db->select('u.r_id, name, price, success-date');
+        $this->db->select_sum('price');
+        $this->db->from('user_orders as u');
+        $this->db->join('restaurants as r', 'r.r_id = u.r_id');
+        $result = $this->db->get()->result();
+        return $result;
+    }
+
 }

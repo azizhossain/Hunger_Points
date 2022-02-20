@@ -128,17 +128,25 @@
                                 <th>Total Sales</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="myTable">
+                            <?php if(!empty($resReport)) {?>
+                            <?php foreach($resReport as $report) { ?>
                             <tr>
-                                <td>
-                                     1<br>2<br>3<br>4<br>5<br>
-                                </td>
+                                <td><?php echo $report->r_id; ?></td>
+                                <td><?php echo $report->name; ?></td>
+                                <td><?php echo '৳ '.$report->price; ?></td>
                             </tr>
+                            <?php } ?>
+                            <?php } else {?>
+                            <tr>
+                                <td colspan="4">Records not found</td>
+                            </tr>
+                            <?php }?>
                         </tbody>
                     </table>
                 </div>
                 <div class="col-md-12">
-                    <a href="" class="btn btn-success mt-3">Download Report</a>
+                    <a href="<?php echo base_url().'admin/home/restaurants_report/'; ?>" target="_blank;"  class="btn btn-success mt-3">Print Report</a>
                 </div>
             </div>
         </div>
