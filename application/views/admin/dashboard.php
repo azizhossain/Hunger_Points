@@ -156,19 +156,27 @@
                                 <th>Ordered Count</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="myTable">
+                            <?php if(!empty($dishReport)) {?>
+                            <?php foreach($dishReport as $report) { ?>
                             <tr>
-                              <td>
-                            1<br>2<br>3<br>4<br>5<br>
-                            </td>
+                                <td><?php echo $report->d_id; ?></td>
+                                <td><?php echo $report->d_name; ?></td>
+                                <td><?php echo $report->qty; ?></td>
                             </tr>
+                            <?php } ?>
+                            <?php } else {?>
+                            <tr>
+                                <td colspan="4">Records not found</td>
+                            </tr>
+                            <?php }?>
                         </tbody>
                     </table>
                 </div>
                 <div class="col-md-12">
-                    <a href="" class="btn btn-success mt-3">Download Report</a>
+                    <a href="<?php echo base_url().'admin/home/dishreport/'; ?>" target="_blank;" class="btn btn-success mb-3">Print Report</a>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
 </div>

@@ -9,4 +9,12 @@ class Admin_model extends CI_Model {
         $admin = $this->db->get('admin')->row_array();
         return $admin;
     }
+     public function dishReport() {
+        $query = $this->db->query('SELECT d_id, d_name, 
+        SUM(quantity) AS qty
+        FROM user_orders
+        GROUP BY d_id
+        ORDER BY SUM(quantity) DESC');
+        return $query->result();
+    }
 }

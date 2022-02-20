@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="<?php echo base_url().'home/index';?>"><img src="
-            <?= base_url('public/uploads/logo/hungerpoint.png'); ?>" class="responsive-img" 
+            <?= base_url('public/uploads/logo/HP3.jpg'); ?>" class="responsive-img" 
             style="width: 40px;height: 40px;border: 0px  solid silver;">Hunger Points</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRes">
                 <span class="navbar-toggler-icon"></span>

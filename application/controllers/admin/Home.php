@@ -30,8 +30,16 @@ class Home extends CI_Controller {
         $data['countDeliveredOrders'] = $this->Order_model->countDeliveredOrders();
         $data['countRejectedOrders'] = $this->Order_model->countRejectedOrders();
 
-
+        $dishReport = $this->Admin_model->dishReport();
+        $data['dishReport'] = $dishReport;
        $this->load->view('admin/partials/header');
        $this->load->view('admin/dashboard', $data);
+    }
+    public function dishreport() {
+        
+        $dishReport = $this->Admin_model->dishReport();
+        $data['dishReport'] = $dishReport;
+       $this->load->view('admin/dishreport', $data);
+               
     }
 }
