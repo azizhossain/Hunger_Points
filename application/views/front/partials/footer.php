@@ -16,8 +16,8 @@
             <p></p>
 
             <a class="navbar-brand" href="<?php echo base_url().'home/index';?>">
-            <img src="<?= base_url('public/uploads/logo/HP 4.jpg');?>"
-            class="responsive-img" style="width: 150px;height: 100px;border: 0px  solid silver;"></a>
+            <img src="<?= base_url('public/uploads/logo/HP 4 B.jpg');?>"
+            class="responsive-img" style="width: 200px;height: 100px;border: 0px  solid silver;"></a>
 
             <p style="text-align: center; text-transform: capitalize;font-style: italic;
             padding-right: 19px;">HUNGER  POINTS</p>
