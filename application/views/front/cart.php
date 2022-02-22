@@ -13,9 +13,14 @@ function updateCartItem(obj, rowid) {
         });
 }
 </script>
-
+<div class="img-container">
+    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/bg.jpg';?>">
+    <div class="carousel-caption text-center">
+        <h2>Shopping Cart</h2>
+    </div>
+    <hr>
+</div>
 <div class="container">
-    <h2>Shopping Cart</h2>
     <div class="table-responsive-sm">
         <table class="table table-striped table-hover">
             <thead>

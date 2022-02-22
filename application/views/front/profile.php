@@ -1,3 +1,9 @@
+<div class="img-container">
+    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/bg.jpg';?>">
+    <div class="carousel-caption text-center">
+        <h2>My Profile</h2>
+    </div>
+</div>
 <link rel="stylesheet" href="<?php echo base_url('assets/css/profile.css');?>">
 <div class="row">
     <div class="col-md-6">

@@ -1,9 +1,11 @@
-<div class="container p-4">
-    <div class="row welcome text-center welcome">
-        <div class="col-12">
-            <h1 class="display-4">Menu of <?php echo $res['name']; ?></h1>
-        </div>
+<div class="img-container">
+    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/bg.jpg';?>">
+    <div class="carousel-caption text-center">
+        <h2>Menu of <?php echo $res['name']; ?></h2>
     </div>
+    <hr>
+</div>
+<div class="container p-4">
     <div class="container res-card">
         <div class="card">
             <?php $img = $res['img'];?>

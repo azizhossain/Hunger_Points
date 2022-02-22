@@ -19,34 +19,15 @@
 
 
 <body>
-    <!-- Navigation Start -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo base_url().'home/index';?>"><img src="
-            <?= base_url('public/uploads/logo/hungerpoint.png'); ?>" class="responsive-img" 
-            style="width: 40px;height: 40px;border: 0px  solid silver;">Hunger Points</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRes">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarRes">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo base_url().'home/index';?>">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="<?php echo base_url().'home/index';?>">Restaurants</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navigation End -->
+    <?php $this->load->view('front/partials/header'); ?>
     <!-- image section start -->
-    <div class="img-container">
-        <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/bg.jpg';?>">
-        <div class="centered-text"></div>
+     <div class="img-container">
+    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/bg.jpg';?>">
+    <div class="carousel-caption text-center">
+        <h2>Login Your Account</h2>
     </div>
+    <hr>
+</div>
     <!-- image section end -->
 
      <!-- login form section start -->

@@ -1,3 +1,10 @@
+<div class="img-container">
+    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/bg.jpg';?>">
+    <div class="carousel-caption text-center">
+        <h2>My Orders</h2>
+    </div>
+    <hr>
+</div>
 <div class="container mt-3">
     <div class="container shadow-container">
         <h2 class="text-center">Recent Orders</h2>

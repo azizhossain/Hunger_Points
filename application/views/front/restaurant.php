@@ -1,10 +1,9 @@
-<div class="container-fluid padding">
-    <div class="row welcome text-center welcome">
-        <div class="col-12">
-            <h1 class="display-4">Restaurants</h1>
-        </div>
-        <hr>
+<div class="img-container">
+    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/bg.jpg';?>">
+    <div class="carousel-caption text-center">
+        <h2>Restaurants</h2>
     </div>
+    <hr>
 </div>
 <div class="container text-center padding dish-card">
     <div class="row container">
