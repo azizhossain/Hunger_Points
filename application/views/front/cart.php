@@ -14,7 +14,7 @@ function updateCartItem(obj, rowid) {
 }
 </script>
 <div class="img-container">
-    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/bg.jpg';?>">
+    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/front.jpg';?>">
     <div class="carousel-caption text-center">
         <h2>Shopping Cart</h2>
     </div>
@@ -56,13 +56,16 @@ function updateCartItem(obj, rowid) {
                 <?php } ?>
                 <?php } else { ?>
                 <tr>
-                    <td colspan="6"><p style="text-align: center; color:red;">No Items In Your Cart!!</p></td>
+                    <td colspan="6" style="text-align: center; color: red;">
+                        <h5>Your cart is currently empty.</h5>
+                        <p style="font-size: 15px;">Before proceed to checkout you must add some dishes to your shopping cart <br>You will find a lot of interesting dishes on our "restaurant" page.</p>
+                    </td>
                 </tr>
                 <?php } ?>
             </tbody>
             <tfoot>
                 <tr>
-                    <td><a href="<?php echo base_url().'restaurant' ?>" class="btn btn-sm btn-warning"><i class="fas fa-angle-left"></i> Continue Ordering</a></td>
+                    <td><a href="<?php echo base_url().'restaurant' ?>" class="btn btn-sm" style="background: #ff6600;"><i class="fas fa-angle-left"></i> Continue Ordering</a></td>
                     <td colspan="3"></td>
                     <?php  if($this->cart->total_items() > 0) { ?>
                     <td class="text-left">Grand Total: <b><?php echo '৳'.$this->cart->total();?></b></td>

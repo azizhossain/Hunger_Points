@@ -7,6 +7,8 @@
     <title>Hunger Points</title>
     <link rel="shortcut icon" href="<?= base_url('public/uploads/logo/hungerpoint.png'); ?>">
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/bootstrap.min.css';?>">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="<?php echo base_url().'assets/js/jquery-3.6.0.min.js';?>"></script>
     <script src="<?php echo base_url().'assets/js/bootstrap.min.js';?>"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -21,9 +23,7 @@
     <!-- Navigation Start -->
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo base_url().'home/index';?>"><img src="
-            <?= base_url('public/uploads/logo/HP 4 w.jpg'); ?>" class="responsive-img" 
-            style="width: 40px;height: 40px;border: 0px  solid silver;">Hunger Points</a>
+            <a class="navbar-brand" href="<?php echo base_url().'home/index';?>"><img src="<?= base_url('public/uploads/logo/55.png'); ?>" class="responsive-img" style="width: 200px;height: 60px;border: 0px  solid silver;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRes">
                 <span class="navbar-toggler-icon"></span>
             </button>

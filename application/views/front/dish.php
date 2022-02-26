@@ -1,5 +1,5 @@
 <div class="img-container">
-    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/bg.jpg';?>">
+    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/front.jpg';?>">
     <div class="carousel-caption text-center">
         <h2>Menu of <?php echo $res['name']; ?></h2>
     </div>

@@ -1,5 +1,5 @@
 <div class="img-container">
-    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/bg.jpg';?>">
+    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/front.jpg';?>">
     <div class="carousel-caption text-center">
         <h2>My Orders</h2>
     </div>
@@ -79,7 +79,7 @@
                         <td><?php echo $order['quantity']; ?></td>
                         <td><?php echo '৳ '.$order['price']; ?></td>
                         <td> <button type="button" class="btn btn-success"><i class="fas fa-check"></i> Delivered</button>
-                        <td><a href="<?php echo base_url().'orders/invoice/'.$order['o_id']; ?>"  target="_blank" class="btn btn-info"><i class="fas fa-file-alt"></i> Invoice</a></td>
+                        <td><a href="<?php echo base_url().'orders/invoice/'.$order['o_id']; ?>"  target="_blank" class="btn btn" style="background: #ff6600;color: white;"><i class="fas fa-file-alt"></i> Invoice</a></td>
                     </tr>
                     <?php } ?>
                     <?php } ?>

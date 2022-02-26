@@ -7,30 +7,30 @@
     </ul>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="<?php echo base_url().'public/uploads/slide/Banner1.jpg';?>">
-            <div class="carousel-caption text-right">
-                <h1 class="display-2">Are You Hungry?!</h1>
-                <h3>Don't worry, we are here to serve you</h3>
-                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-outline-light btn-lg">Order Now</a>
-                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-primary btn-lg">View Menu</a>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="<?php echo base_url().'public/uploads/slide/Banner2.jpg';?>">
-            <div class="carousel-caption text-right">
-                <h1 class="display-2">Are You Hungry?!</h1>
-                <h3>Don't worry, we are here to serve you</h3>
-                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-outline-light btn-lg">Order Now</a>
-                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-primary btn-lg">View Menu</a>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="<?php echo base_url().'public/uploads/slide/Banner3.jpg';?>">
+            <img src="<?php echo base_url().'public/uploads/slide/Biriyani.jpeg';?>">
             <div class="carousel-caption text-left">
                 <h1 class="display-2">Are You Hungry?!</h1>
                 <h3>Don't worry, we are here to serve you</h3>
-                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-outline-light btn-lg">Order Now</a>
-                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-primary btn-lg">View Menu</a>
+                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-success btn-lg">Order Now</a>
+                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-lg" style="background: #ff6600;">View Menu</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="<?php echo base_url().'public/uploads/slide/Burger.jpg';?>">
+            <div class="carousel-caption text-right">
+                <h1 class="display-2">Are You Hungry?!</h1>
+                <h3>Don't worry, we are here to serve you</h3>
+                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-success btn-lg">Order Now</a>
+                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-lg"  style="background: #ff6600;">View Menu</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="<?php echo base_url().'public/uploads/slide/Pizza.jpg';?>">
+            <div class="carousel-caption text-left">
+                <h1 class="display-2">Are You Hungry?!</h1>
+                <h3>Don't worry, we are here to serve you</h3>
+                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-success btn-lg">Order Now</a>
+                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-lg" style="background: #ff6600;">View Menu</a>
             </div>
         </div>
     </div>
@@ -64,11 +64,11 @@
     </div>
     <hr class="my-4">
 </div>
-<div class="container-fluid padding">
+<div class="container padding">
     <div class="row text-center padding">
         <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="bike-image" style="padding-bottom: 20px;">
-            <img width="600" height="246" src="<?php echo base_url().'public/uploads/img/1.jpg';?>">
+            <img width="600" height="246" class="img-fluid" src="<?php echo base_url().'public/uploads/img/1.jpg';?>">
             </div>
         </div>
          <div class="col-xs-12 col-sm-6 col-md-4">
@@ -78,19 +78,34 @@
             <p>Select the food you want from thousands of restaurants.</p>
         </div>
 </div>
-<div class="row text-center padding">
-         <div class="col-xs-12 col-sm-6 col-md-4" style="padding-top: 100px;">
+<div class="row text-center p-3">
+         <div class="col-xs-12 col-sm-6 col-md-4" style="margin-top: 100px; margin-right: 90px; ">
             <h4>Confirm your order and wait</h4>
             <p>Just confirm your order and enjoy our fastest delivery. Fresh and delicious food will be delivered to your doorstep.</p>
         </div>
        
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="bike-image" style="padding-bottom: 20px; padding-left: 180px;">
-            <img width="600" height="246" src="<?php echo base_url().'public/uploads/img/3.jpg';?>">
+            <div class="bike-image" style="margin-bottom: 20px;">
+            <img width="400" height="246"  class="img-fluid" style="margin-left: 200px; margin-top: 50px;" src="<?php echo base_url().'public/uploads/img/3.jpg';?>">
             </div>
         </div>
 </div>
+<div class="row text-center padding">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="bike-image" style="padding-bottom: 20px;">
+            <img width="600" height="246"  class="img-fluid" src="<?php echo base_url().'public/uploads/img/cash2.jpg';?>">
+            </div>
+        </div>
+         <div class="col-xs-12 col-sm-6 col-md-4">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4" style="padding-top: 100px; padding-right: 80px;">
+            <h4>Pay Bill Using Cash On Delivery</h4>
+            <p>Have No Bkash, No Rocket, No Nogad ?? Dont't Worry! Pay bill using cash on delivery for your food.</p>
+        </div>
 </div>
+</div>
+
+
 <div class="container-fluid padding">
     <div class="row welcome text-center welcome">
         <div class="col-12">
@@ -113,7 +128,7 @@
                         <h4 class="text-muted"><b>৳ <?php echo $dish['price']; ?></b></h4>
                     </div>
                     <p class="card-text"><?php echo $dish['about']; ?></p>
-                    <a href="<?php echo base_url().'Dish/addToCart/'.$dish['d_id']; ?>" class="btn btn-primary"><i
+                    <a href="<?php echo base_url().'Dish/addToCart/'.$dish['d_id']; ?>" class="btn btn-success"><i
                             class="fas fa-cart-plus"></i> Add to
                         Cart</a>
                 </div>
@@ -146,3 +161,40 @@
     </div>
 </div>
 <!-- social media section end -->
+<!-- why choose us section start -->
+<div  style="background:  #00001a; color: white;">
+<div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+            <h1 class="display-5">Why Choose Us</h1>
+        </div>
+        <hr>
+    </div>
+    <div class="row text-right p-2">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+            <h4 style="">Healthy Food</h4>
+            <p>Building a society & community with sound mind, mentality and health by developing healthy food habit</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-1 text-left"><img src="<?php echo base_url().'public/uploads/img/h.png';?>"></div>
+        <div class="col-xs-12 col-sm-6 col-md-3"><img src="<?php echo base_url().'public/uploads/img/honey.png';?>"></div>
+        <div class="col-xs-12 col-sm-6 col-md-4 text-left">
+            <h4>Honesty & Integrity</h4>
+            <p>Our aim is to earn halal income for our stakeholders through doing business with integrity & honestly in a fair manner.</p>
+        </div>
+    </div>
+    <div class="row text-right p-2">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+            <h4 style="">Quickest Delivery</h4>
+            <p>We would love to make our consumers feel like shop next to their door by ensuring quickest delivery service.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-1 text-left"><img src="<?php echo base_url().'public/uploads/img/dlevery.png';?>"></div>
+        <div class="col-xs-12 col-sm-6 col-md-3 text-right"><img src="<?php echo base_url().'public/uploads/img/en.png';?>"></div>
+        <div class="col-xs-12 col-sm-6 col-md-4 text-left">
+            <h4 style="">Environmental safety</h4>
+            <p>We always work on keeping a healthy environment for our employees. We dump and recycle our wastes in proper manner.</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- why choose us section end -->

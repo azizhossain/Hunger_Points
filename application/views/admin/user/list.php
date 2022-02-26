@@ -43,7 +43,7 @@
                         <td><?php echo $user['address']; ?></td>
                         <td>
                             <a href="<?php echo base_url().'admin/user/edit/'.$user['user_id'];?>"
-                                class="btn btn-info mb-1"><i
+                                class="btn btn-success mb-1"><i
                                     class="fas fa-edit mr-1"></i>Edit</a>
                             <a href="javascript:void(0);" onclick="deleteUser(<?php echo $user['user_id']; ?>)"
                                 class="btn btn-danger"><i class="fas fa-trash-alt"></i>   Delete</a>

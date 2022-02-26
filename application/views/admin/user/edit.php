@@ -66,7 +66,7 @@
             <span></span>
         </div>
         <button type="submit" class="btn btn-success">Make Changes</button>
-        <a href="<?php echo base_url().'admin/user/index'; ?>" class="btn btn-secondary">Back</a>
+        <a href="<?php echo base_url().'admin/user/index'; ?>" class="btn btn" style="background: #ff6600; color: white;">Back</a>
     </form>
 </div>
 <script>

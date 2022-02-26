@@ -1,5 +1,5 @@
 <div class="img-container">
-    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/bg.jpg';?>">
+    <img width="100%" height="250px" src="<?php echo base_url().'public/uploads/slide/front.jpg';?>">
     <div class="carousel-caption text-center">
         <h2>My Profile</h2>
     </div>
@@ -67,7 +67,7 @@
                     </div>
                     <div class="py-3 pb-4 border-bottom">
                         <button type="submit" class="btn btn-success mr-3">Save Changes</button>
-                        <a href="<?php echo base_url().'home' ?>" class="btn border button">Cancel</a>
+                        <a href="<?php echo base_url().'home' ?>" class="btn border button" style="background: #ff6600;color: white;">Cancel</a>
                     </div>
                 </div>
             </form>
@@ -113,7 +113,7 @@
                     </div>
                     <div class="py-3 pb-4 border-bottom">
                         <button type="submit" class="btn btn-success mr-3 mb-2">Save Changes</button>
-                        <a href="<?php echo base_url().'home' ?>" class="btn border button">Cancel</a>
+                        <a href="<?php echo base_url().'home' ?>" class="btn border button" style="background: #ff6600;color: white;">Cancel</a>
                     </div>
                 </div>
             </form>

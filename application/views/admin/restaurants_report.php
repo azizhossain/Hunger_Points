@@ -19,14 +19,17 @@
         <div class="report mb-3">
             <div class="row mb-3 p-3">
                 <div class="col-6">
-                    <h3 style="color:purple"><b>Restaurant Report</b></h3>
+                    <h3 style="color:purple;padding-top: 20px;"><b>Restaurant Report</b></h3>
+                </div>
+                <div class="col-6" style="padding-left: 100px;">
+                    <img src="<?= base_url('public/uploads/logo/55.png'); ?>" class="responsive-img" style="width: 200px;height: 70px;border: 0px  solid silver;">
                 </div>
                 
                 <div class="col-12">
                 <hr>
                     <table class="table table-striped table-responsive table-hover">
                         <thead>
-                            <tr>
+                            <tr style="text-align: center;">
                                 <th>ID</th>
                                 <th>Restaurant Name</th>
                                 <th>Total Sales</th>
