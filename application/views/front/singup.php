@@ -103,10 +103,10 @@
                 <span></span>
             </div>
             <div class="status text-center text-danger font-weight-bold my-2"></div>
-            <button type="submit" class="btn btn-primary btn-block">Create Account</button><br>
+            <button type="submit" class="btn btn-success btn-block">Create Account</button><br>
             <h6 style="text-align: center; color: red;">Already registered?</h6>
             <div class="status text-center text-danger font-weight-bold my-2"></div>
-            <a href="<?php echo base_url().'login/index';?>" class="btn waves-effect" style="background: black;width: 100%;margin-top: 10px;box-shadow: none;text-transform: capitalize;color:white;">Log In</a>
+            <a href="<?php echo base_url().'login/index';?>" class="btn waves-effect" style="background:#ff6600;width: 100%;margin-top: 10px;box-shadow: none;text-transform: capitalize;color:white;">Log In</a>
         </form>
     </div>
 

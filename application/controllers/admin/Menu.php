@@ -26,7 +26,7 @@ class Menu extends CI_Controller {
         $this->load->model('Store_model');
         $store = $this->Store_model->getStores();
 
-        $config['upload_path']          = './public/uploads/dishesh/';
+        $config['upload_path']          = './public/uploads/dishesh/thumb/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
 
         $this->load->library('upload', $config);

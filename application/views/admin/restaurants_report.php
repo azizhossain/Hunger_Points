@@ -29,7 +29,7 @@
                 <hr>
                     <table class="table table-striped table-responsive table-hover">
                         <thead>
-                            <tr style="text-align: center;">
+                            <tr>
                                 <th>ID</th>
                                 <th>Restaurant Name</th>
                                 <th>Total Sales</th>

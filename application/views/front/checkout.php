@@ -71,9 +71,9 @@
                     Pay with Cash on Delivery
                 </div>
                 <div>
-                    <a href="<?php echo base_url().'cart'; ?>" class="btn btn-warning"><i class="fas fa-angle-left"></i>
+                    <a href="<?php echo base_url().'cart'; ?>" class="btn btn-success"><i class="fas fa-angle-left"></i>
                         Back to cart</a>
-                    <button type="submit" name="placeOrder" class="btn btn-success">Place Order <i
+                    <button type="submit" name="placeOrder" class="btn btn" style="background: #ff6600; color: white;">Place Order <i
                             class="fas fa-angle-right"></i></button>
                 </div>
                 </from>

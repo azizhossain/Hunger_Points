@@ -65,7 +65,7 @@
             <?php echo form_error('password'); ?>
             <div class="py-3 pb-4 border-bottom" style="text-align:right;">
                 <button type="submit" class="btn btn-success mr-3">Login</button>
-                <a href="<?php echo base_url().'singup/index' ?>" class="btn btn-danger">Register</a>
+                <a href="<?php echo base_url().'singup/index' ?>" class="btn btn" style="background:#ff6600; color: white;">Register</a>
             </div>
         </form>
     </div>

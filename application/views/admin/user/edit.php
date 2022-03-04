@@ -168,7 +168,7 @@ const validate = () => {
     //phone validation
     if (phoneVal === "") {
         setErrorMsg(phone, 'phone cannot be blank');
-    } else if (phoneVal.length != 10) {
+    } else if (phoneVal.length != 11) {
         setErrorMsg(phone, 'enter valid phone number only');
     } else {
         setSuccessMsg(phone);

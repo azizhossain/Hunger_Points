@@ -181,7 +181,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12" style="padding-top:20px;">
                     <a href="<?php echo base_url().'admin/home/dishreport/'; ?>" target="_blank;" class="btn btn-success mb-3">Print Report</a>
                 </div>
             </div> 

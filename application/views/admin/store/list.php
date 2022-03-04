@@ -1,4 +1,6 @@
-    <div class="row"><div class="container my-4">
+    <div class="container">
+    <div class="row">
+        <div class="container my-6">
      <?php if($this->session->flashdata('res_success') != ""):?>
     <div class="alert alert-success">
         <?php echo $this->session->flashdata('res_success');?>
@@ -62,7 +64,7 @@
         </div>
     </div>
 </div>
-
+</div>
 <script type="text/javascript">
 function deleteStore(id) {
     if (confirm("Are you sure you want to delete store?")) {
